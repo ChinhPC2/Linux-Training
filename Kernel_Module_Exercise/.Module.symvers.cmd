@@ -1,1 +1,0 @@
-savedcmd_/home/chinhpc2/Desktop/Linux_Training_ChinhPC2/Linux-Training/Kernel_Module_Exercise/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/chinhpc2/Desktop/Linux_Training_ChinhPC2/Linux-Training/Kernel_Module_Exercise/Module.symvers -T /home/chinhpc2/Desktop/Linux_Training_ChinhPC2/Linux-Training/Kernel_Module_Exercise/modules.order -i Module.symvers -e 

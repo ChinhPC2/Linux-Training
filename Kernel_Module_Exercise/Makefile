@@ -1,4 +1,8 @@
 obj-m := module_a.o
+#obj-m := module_b.o
+
+#KBUILD_EXTRA_SYMBOLS := /home/chinhpc2/Desktop/Linux_Training_ChinhPC2/Linux-Training/Kernel_Module_Exercise/Module.symvers
+
 KDIR := /lib/modules/$(shell uname -r)/build
 PWD := $(shell pwd)
 

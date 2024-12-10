@@ -1,1 +1,0 @@
-savedcmd_/home/chinhpc2/Desktop/Linux_Training_ChinhPC2/Linux-Training/Kernel_Module_Exercise/module_a.mod := printf '%s\n'   module_a.o | awk '!x[$$0]++ { print("/home/chinhpc2/Desktop/Linux_Training_ChinhPC2/Linux-Training/Kernel_Module_Exercise/"$$0) }' > /home/chinhpc2/Desktop/Linux_Training_ChinhPC2/Linux-Training/Kernel_Module_Exercise/module_a.mod
