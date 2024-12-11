@@ -1,0 +1,8 @@
+Task 1: Write a C program that opens any file. If the file opens successfully, return 0 to the parent process; if there is an error, 
+        return -1 to the parent process. Use the terminal to run the program and use echo $? to read the return value. 
+
+Task 2: Write a program called A that creates child process called B and print PID and PPID.
+
+Task 3: Write a program called A thay creates a child process called B, print PID and PPID. Using system call waitpid() to get ending state of B.
+
+Task 4: Using SIGCHLD to prevent zombie process.
