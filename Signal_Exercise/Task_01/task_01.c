@@ -9,7 +9,7 @@
 #include <signal.h>
 
 void block_ctrl_c_signal_handler(int signo) {
-    printf("Ctrl C blocked!\n");
+    printf(" - Ctrl C blocked!\n");
 }
 
 void main() {
