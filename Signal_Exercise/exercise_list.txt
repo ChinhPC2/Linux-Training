@@ -1,0 +1,5 @@
+Task 1: Write a C program to block the Ctrl + C signal (SIGINT) from the user. 
+
+Task 2: Write a C program to print the signal mask of the current process. 
+
+Task 3: Write a C program to block SIGINT, then check if SIGINT is in the pending signals, and if so, exit the program. 
