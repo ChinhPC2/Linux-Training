@@ -4,6 +4,7 @@
         "module.h": "c",
         "kernel.h": "c",
         "stdio.h": "c",
-        "types.h": "c"
+        "types.h": "c",
+        "signal.h": "c"
     }
 }
