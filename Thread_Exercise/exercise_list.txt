@@ -1,0 +1,18 @@
+Task 1: Count the number of odd numbers from 1 to 1 billion. Write code for two cases: 
+
+    - case 1 using multithreading, 
+    - case 2 without using multithreading. 
+        
+    Compare the execution time of the two cases.
+
+Task 2: Write a program creating 2 threads . All of them use a handler function. 
+    
+    - If thread 1 is running, printing some verifying information. 
+    - If thread 2 is running, providing a struct called human with some field: 
+
+        full name, 
+        born year, 
+        phone number, 
+        hometown. 
+        
+    Then, print that infor to terminal.
