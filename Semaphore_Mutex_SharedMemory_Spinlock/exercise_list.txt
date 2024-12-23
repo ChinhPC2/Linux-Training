@@ -1,0 +1,3 @@
+Task 1: Count from 1 to 1 billion using multithreading with each mechanism: semaphore, mutex, and spinlock.
+
+Task 2: Write a program to compare betwen two mapping method in POSIX share memory (Private file mapping and Shared file mapping)
