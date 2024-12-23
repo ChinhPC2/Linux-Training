@@ -3,10 +3,13 @@
 
 ```
 make
-
 ```
 ```
 ./count_by_<method>
+```
+- To clean exe file:
+```
+make clean
 ```
 
 #### Result:
