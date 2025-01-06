@@ -1,0 +1,33 @@
+/{
+        device1 {
+                compatible = "my,device1";
+                size = <1024>;
+                serial_number = "Seri-01";
+                perm = "rw";
+                status = "okay";
+        };
+
+        device2 {
+                compatible = "my,device2";
+                size = <2048>;
+                serial_number = "Seri-02";
+                perm = "r";
+                status = "okay";
+         };
+
+        device3 {
+                compatible = "my,device3";
+                size = <512>;
+                serial_number = "Seri-03";
+                perm = "rw";
+                status = "okay";
+        };
+
+        device4 {
+                compatible = "my,device4";
+                size = <256>;
+                serial_number = "Seri-04";
+                perm = "r";
+                status = "okay";
+         };
+};
