@@ -20,11 +20,17 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
-    // Bind
     address.sin_family = AF_INET;
-    address.sin_addr.s_addr = INADDR_ANY;
     address.sin_port = htons(PORT);
 
+    // Convert address to binary
+    if (inet_pton(AF_INET, "127.0.0.1", &address.sin_addr) <= 0)
+    {
+        perror("Invalid address.\n");
+        exit(EXIT_FAILURE);
+    }
+
+    // Bind
     if (bind(serv_fd, (struct sockaddr *)&address, sizeof(address)) < 0){
         perror("Bind failed.\n");
         close(serv_fd);
@@ -48,6 +54,9 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
+        if(strncmp(buffer, "exit", 4) == 0) {
+            printf("Disconneted.\n");
+            break;
     printf("Connected. Type 'exit' to quit.\n");
 
     // Chat
@@ -61,10 +70,6 @@ int main() {
         }
 
         printf("Client: %s", buffer);
-
-        if(strncmp(buffer, "exit", 4) == 0) {
-            printf("Disconneted.\n");
-            break;
         }
 
         send(new_socket, message, strlen(message), 0);
