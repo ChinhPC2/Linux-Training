@@ -1,4 +1,4 @@
-#include <linux/module.h>       // Kernel macro and function
+#include <linux/module.h>       // Module macro and function
 #include <linux/fs.h>           // File operations 
 #include <linux/uaccess.h>      // Transfer data between kernel and user
 #include <linux/device.h>       // For class_create function and device_create function
@@ -61,6 +61,7 @@ static int __init led_init(void) {
         return -1;
     }
 
+    // Allocate cdev structure
     my_cdev = cdev_alloc();
     if (!my_cdev) {
         unregister_chrdev_region(device_id, 1);
@@ -100,6 +101,8 @@ static int __init led_init(void) {
 
 // Exit
 static void __exit led_exit(void) {
+    gpio_set_value(LED_GPIO, 0);  
+    gpio_free(LED_GPIO);
     device_destroy(my_class, device_id);
     class_destroy(my_class);
     cdev_del(my_cdev);
