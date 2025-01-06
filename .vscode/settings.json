@@ -1,10 +1,14 @@
 {
     "files.associations": {
-        "fcntl.h": "c",
+        "typeinfo": "c",
+        "compare": "c",
+        "type_traits": "c",
+        "new": "c",
+        "slab.h": "c",
+        "device.h": "c",
+        "of.h": "c",
+        "uaccess.h": "c",
         "module.h": "c",
-        "kernel.h": "c",
-        "stdio.h": "c",
-        "types.h": "c",
-        "signal.h": "c"
+        "platform_device.h": "c"
     }
 }
