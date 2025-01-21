@@ -1,17 +1,45 @@
-# Sử dụng image Ubuntu làm cơ sở
-FROM gcc:11.4.0
+FROM ubuntu:20.04
 
-# # Cài đặt GCC và các công cụ cần thiết
-# RUN apt-get update && apt-get install -y gcc && apt-get clean
+RUN apt-get update\
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata\
+    && apt-get install -y gcc\
+                          binutils\
+                          bzip2\
+                          flex\
+                          git\
+                          g++\
+                          time\
+                          util-linux\
+                          gawk\
+                          gzip\
+                          help2man\
+                          intltool\
+                          libelf-dev\
+                          zlib1g-dev\
+                          make\
+                          libncurses-dev\
+                          libssl-dev\
+                          patch\
+                          perl-modules\
+                          libthread-queue-any-perl\
+                          python2-dev\
+                          python3-dev\
+                          swig\
+                          unzip\
+                          wget\
+                          gettext\
+                          xsltproc\
+                          zlib1g-dev\
+                          libboost-dev\
+                          openjdk-11-jdk-headless\
+                          libxml-parser-perl\
+                          zip\
+                          libusb-dev\
+                          bin86\
+                          bcc\
+                          sharutils\
+                          gcc-multilib\
+                          b43-fwcutter\
+    && apt-get clean 
 
-# Tạo thư mục làm việc trong container
 WORKDIR /app
-
-# Sao chép mã nguồn từ máy chủ vào container
-COPY docker_test.c .
-
-# Biên dịch chương trình
-RUN gcc docker_test.c -o docker_test
-
-# Lệnh mặc định để chạy chương trình
-CMD ["./docker_test"]
